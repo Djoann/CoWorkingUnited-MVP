@@ -1,0 +1,116 @@
+        /* New modifs sidebar */
+#controlWrap {
+    max-width: none;
+    width: 100%;
+    margin: 0px;
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+.menu {
+width: 42%;
+float: right;
+overflow: hidden;
+height: 50px;
+text-align: center;
+padding: 8px 0 14px;
+border-left:solid 1px #000;
+}
+
+.searchWrap {
+width: 22%;
+float: left;
+background: #fff;
+height: 50px;
+position: relative;
+}
+
+#search {
+height: 50Px;
+width: 100%;
+margin: 0;
+}
+
+.filterWrap {
+margin-left: 5px;
+overflow: scroll;
+float: left;
+width: 17%;
+height: 43px;
+}
+
+.filterHeader {
+margin: 0 auto;
+padding: 14px 10px;
+font-size: .9em;
+position: relative;
+}
+
+.navButton {
+margin: 0 2% 0 0;
+width: 35%;
+padding: 0px 10px 8px !important;
+width: 35%;
+overflow: hidden;
+}
+
+
+
+
+        /* OLd modifs sidebar */
+
+  			.container {
+  				margin-right: 0 !important;
+				margin-left: 0 !important;
+				width:100% !important;
+				height: 100% !important;
+			}
+
+            .welcomer { 
+                color: #fff; 
+                font-size: 30px !important;
+            }
+
+			.container::after {
+				background: rgba(0, 0, 0, 1) !important;
+			}
+
+			.container.overlay-open {
+				-webkit-transform: translateX(0%);
+				transform: translateX(0%);
+			}
+  			
+  			.overlay{ z-index: 9999;}
+  			.overlay-contentpush { background: rgba(0, 0, 0, 1); }
+
+  			input.form-control {
+				border: 2px solid #bdc3c7;
+				color: #34495e;
+				font-family: "Lato", Helvetica, Arial, sans-serif;
+				font-size: 30px;
+				line-height: 1.2;
+				padding: 0px 12px;
+                width: 45%;
+				height: 55px;
+				-webkit-appearance: none;
+				border-radius: 6px;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+				transition: border .25s linear, color .25s linear, background-color .25s linear;
+			}
+
+            .changecity {
+                width: 80% !important;
+                padding: 5px 5px 5px !important;
+            }
+
+            .changecityMenu {
+            width: 17%;
+            float: left;
+            border-left: 1px solid #000;
+            overflow: hidden;
+            height: 50px;
+            text-align: center;
+            padding: 8px 0 14px;
+            }

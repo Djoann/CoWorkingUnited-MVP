@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>CoWorkingUnited | One membership for hundreds of spaces.</title>
+		<meta name="description" content="We are challenging the way people work together, creating a global membership that gives you access to a network of independent coworking spaces, with one single account." />
+		<meta name="keywords" content="coworkingunited,work together, global membership, coworking spaces, single account." />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style7.css" />
+		<link rel="stylesheet" type="text/css" href="flat-css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="flat-css/docs.css" />
+		<link rel="stylesheet" type="text/css" href="flat-css/flat-ui.css" />
+
+		<!-- Map css -->
+		<link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/screen.css">                     
+        <link rel="stylesheet" href="./css/phone.css" media="only screen and (max-device-width: 480px)">
+        <link rel="stylesheet" href="./css/tablet.css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)">
+        <!-- end Map css -->
+
+        <!-- modif css -->
+        <link rel="stylesheet" href="./css/style.css">  
+        <link rel="stylesheet" type="text/css" href="css/spacecards.css">
+		
+  		<style type="text/css">
+
+div#sidebar {
+width: 42%;
+height: 600px;
+float: right;
+overflow: scroll;
+position: fixed;
+background-color: #fff;
+z-index: 99;
+top: 50px;
+right: 0px;
+}
+
+.sidecontent {
+    width: 90%;
+    margin-left: 3%;
+    float: left;
+}
+
+
+.scoring {
+padding: 8px;
+width: 25%;
+height: 45px;
+float: left;
+position: relative;
+overflow: scroll;
+}
+
+label {
+float: left;
+margin: 7px;
+}
+
+.CWUlogo {
+    height: 40px;
+    width: 15%;
+    float: left;
+    padding: 10px;
+}
+
+
+  		</style>
+        <!-- end modif css -->
+	</head>
+	<body>
+
+
+<!-- ****** #NAVBAR WRAP ****** -->
+        <div id="controlWrap">
+
+			<!-- #MODAL WRAP -->
+            <div class="aboutWrap">
+                <div class="about">
+                    <h1>Travellers, Freelances, Find or Join a Co Working Space</h1>
+                    <h2>You will never work alone.</h2>
+                    <p>Co Working United is an collaborative project which aims to create a global network of co working spaces, listing them, helping them to get visibility & traction.</p> 
+
+                    <!-- #MODAL WRAP ACTIONS (FORM add ressourc) -->
+                    <div class="mapActions">
+                        <a href="https://docs.google.com/spreadsheet/viewform?formkey=#gid=0" class="action addResource" title="Add a Resource"  target="_blank"><i class="icon-plus"></i><br/>Add a Resource</a>
+                        <a href="https://groups.google.com/forum/" class="action discussProject" title="Discuss the Project"  target="_blank"><i class="icon-comments"></i><br/>Discuss Project</a>
+                        <a href="https://github.com/" class="action mapSource" title="View the Map Source" target="_blank"><i class="icon-github-alt"></i><br/>The Map Source</a>
+                    </div>
+                </div><!-- .about -->
+            </div><!-- .aboutWrap -->
+			<!-- #MODAL WRAP END -->
+            
+
+
+            <!-- LOGO Co working United -->
+            <a class="CWUlogo" href="http://www.coworkingunited.com/"><img height="37" width="200" src="img/cwulogo.png" class="CWLogo" border="0"></a>
+
+
+
+            <!-- City selected -->
+            <div class="changecityMenu">
+                    <a href="#changecity" id="trigger-overlay" class="action changecity" title="changecity"><i class="fa-crosshairs"></i> Change City</a>
+            </div>
+
+            <!-- City Selected -->
+            <div class="scoring">
+              <!-- <label> City:  </label> -->
+              <select id="city" onchange="drawTable()">
+                <option value="">All</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Phuket">Phuket</option>
+                <option value="Chiang Mai">Chiang Mai</option>
+                <option value="Bali">Bali</option>
+                <option value="Jakarta">Jakarta</option>
+              </select>
+            </div>
+
+
+            <!-- .menu  -->
+            <div class="menu">
+                <a href="#Addproject" class="action navButton addResource" title="Add a Resource"><i class="icon-plus"></i> Add a Resource</a>
+                <a href="#aboutModal" role="button" class="action navButton aboutMap" title="About the Map" data-toggle="modal"><i class="icon-map-marker"></i>About the Map</a>
+            </div><!-- .menu -->
+
+        </div>
+<!-- ******  #NAVBAR WRAP END ******  -->
+
+
+
+
+
+
+
+<!-- ******  MAP ******  -->
+        <!-- #MAP Locate me button-->
+        <div class="locateMe" rel="tooltip" data-placement="left" data-original-title="click to re-center the map"><i class="icon-map-marker"></i></div>
+        
+        <!-- #MAP -->
+        <div id="map-wrapper">
+            <div id="map-canvas"></div>
+        </div>
+        <!-- #MAP END -->
+<!-- ****** END MAP ******  -->
+
+
+
+
+
+
+<!-- *********  SIDEBAR MODULE  ********** -->
+<div id="sidebar">
+    <!-- **CONTENT SIDEBAR** -->
+
+    <!-- . test searchwrap + Filter -->
+            <div class="searchWrap sidecontent">
+                <form id="search">
+                    <input id="searchForm" type="text" placeholder="Search by name.." />
+                </form>
+                <div class="searchIcon"><i class="icon-search"></i></div>
+                <div class="filterIcon"><i class="icon-tags"></i></div>
+            </div><!-- .searchWrap -->
+
+            <!-- Layer filters - auto render -->
+            <div class="filterWrap sidecontent">
+                <div class="filterHeader">Filter By Business Type <i class="icon-caret-up"></i></div>
+                <form id="filter">
+                    <ul class="filters">
+                        <li><label class="any-filter">Any<input type="checkbox" checked="checked" value="any"></label></li>
+                        <li><label>Workspace<input type="checkbox" checked="checked" value="workspace"></label></li>
+                        <li><label>Service<input type="checkbox" checked="checked" value="service"></label></li>
+                        <!-- <li><label>Accelerator<input type="checkbox" checked="checked" value="accelerator"></label></li> -->
+                    </ul>
+                </form>
+            </div><!-- .filterWrap -->
+        <!-- . test searchwrap + Filter -->
+
+
+    <!-- SIDEBAR Fusion Table Datas -->
+    <div id="dataContainer" class="sidecontent"  style="display: block;">
+
+
+      <!-- LAUNCHPAD SpaceCard -->
+        <div class="spaceCard space-b37d3f9bf7bde5956a16e152013d1ea3">
+            <a href="http://givenget.eu/COWORKINGUNITED/APP/s/hubba/index.html" target="_blank">
+              <div class="image" data-lazyload="#/assets/cities/500px" style="background-image: url(http://coworkable.com/uploadedimages/116/officespace/116_1204064009.jpg);">
+                  <div class="cover"></div>
+                  <div class="nomadcost">$ 6/Day</div>
+                  <div class="weather"><i class="wi wi-day-cloudy"></i><span>Bangkok</span></div>
+                  <h3>Launchpad</h3>
+                  <div class="internet_speed"><i class="fa fa-plane"></i><span>20</span> mbps</div>
+                  <div class="distance"><i class="fa fa-plane"></i> <span>40</span> seats</div>
+              </div>
+            </a>
+        </div>   <!-- End SpaceCard -->
+
+      <!-- Hubba SpaceCard -->
+        <div class="spaceCard space-b37d3f9bf7bde5956a16e152013d1ea3">
+            <a href="http://givenget.eu/COWORKINGUNITED/APP/s/hubba/index.html" target="_blank">
+              <div class="image" data-lazyload="#/assets/cities/500px" style="background-image: url(http://coworkable.com/uploadedimages/107/officespace/107_1004052417.jpg);">
+                  <div class="cover"></div>
+                  <div class="nomadcost">$ 9/Day</div>
+                  <div class="weather"><i class="wi wi-day-cloudy"></i><span>Bangkok</span></div>
+                  <h3>Hubba</h3>
+                  <div class="internet_speed"><i class="fa fa-plane"></i><span>30</span> mbps</div>
+                  <div class="distance"><i class="fa fa-plane"></i> <span>25</span> seats</div>
+              </div>
+            </a>
+        </div>   <!-- End SpaceCard -->
+
+      <!-- Kliquedesk SpaceCard -->
+        <div class="spaceCard space-b37d3f9bf7bde5956a16e152013d1ea3">
+            <a href="http://givenget.eu/COWORKINGUNITED/APP/s/hubba/index.html" target="_blank">
+              <div class="image" data-lazyload="#/assets/cities/500px/" style="background-image: url(http://coworkable.com/uploadedimages/105/officespace/105_1004034209.jpg);">
+                  <div class="cover"></div>
+                  <div class="nomadcost">$ 14/Day</div>
+                  <div class="weather"><i class="wi wi-day-cloudy"></i><span>Bangkok</span></div>
+                  <h3>KliqueDesk</h3>
+                  <div class="internet_speed"><i class="fa fa-plane"></i><span>20</span> mbps</div>
+                  <div class="distance"><i class="fa fa-plane"></i> <span>30</span> seats</div>
+              </div>
+            </a>
+        </div>   <!-- End SpaceCard -->
+
+    </div>
+
+</div>
+<!-- ********* END SIDEBAR MODULE  ********** -->
+
+
+
+
+
+
+
+
+
+<!-- ****** EVENTS JQUERY FRAMES (MODAL + OVERLAY) ****** -->
+
+        <!-- Modal !!!!-->
+        <div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog" >
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <div class="modal-body"></div>
+        </div>
+        
+        <!-- Overlay !!!! -->
+		<div class="overlay overlay-contentpush open">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+                <!-- Title welcome -->
+                <h1 class="welcomer">Where do you wanna go?</h1>
+				<!-- EDIT ZONE OVERLAY -->
+				<div class="row">
+				        	<div class="form-group">
+					        	<input type="text" name="searchcity" value="" placeholder="Search City" class="form-control" id="searchcity">
+				        	</div>          
+				</div>
+				<!-- END EDIT ZONE OVERLAY-->
+			</nav>
+		</div>
+	 <!-- </div>  end container for overlay -->
+<!-- ****** END EVENTS JQUERY FRAMES (MODAL + OVERLAY) ****** -->
+
+
+
+
+        <!-- Scripts -->
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.js"></script>
+        <script src="./js/jquery.hovertips.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="./js/socialite.min.js"></script>
+        <script src="./js/socialite.github.js"></script>
+        
+        <!-- Modifs Scripts -->
+		<script src="js/classie.js"></script>
+		<script src="js/demo7.js"></script>
+        <script src="./js/index.js"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="js/spacecards.js"></script>
+	</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>CoWorkingUnited | One membership for hundreds of spaces.</title>
+		<meta name="description" content="We are challenging the way people work together, creating a global membership that gives you access to a network of independent coworking spaces, with one single account." />
+		<meta name="keywords" content="coworkingunited,work together, global membership, coworking spaces, single account." />
+		<meta name="author" content="Djoann Fal" />
+
+    <!-- modif css -->
+
+  	<style type="text/css">
+
+
+html, body {
+font-size: 1.05em;
+}
+
+body {
+font-size: 1.05em;
+background-color: #fff;
+font-family: "Proxima Nova","Helvetica Neue","Helvetica","Arial",sans-serif;
+font-weight: 300;
+margin: 0px;
+}
+
+a {
+color: #c6c2be;
+text-decoration: none;
+}
+
+div#sidebar {
+width: 42%;
+height: 600px;
+float: right;
+overflow: scroll;
+position: fixed;
+background-color: #fff;
+z-index: 99;
+top: 50px;
+right: 0px;
+}
+
+.sidecontent {
+    width: 90%;
+    margin-left: 3%;
+    float: left;
+}
+
+
+.scoring {
+padding: 8px;
+width: 25%;
+height: 45px;
+float: left;
+position: relative;
+overflow: scroll;
+}
+
+label {
+float: left;
+margin: 7px;
+}
+
+.CWUlogo {
+    margin-left: 20px;
+    height: 40px;
+    width: 15%;
+    float: left;
+    padding: 5px;
+    zoom: 1;
+}
+
+.menu {
+width: 42%;
+float: right;
+overflow: hidden;
+height: 31px;
+text-align: center;
+padding: 5px 0 14px;
+border-left: solid 1px #000;
+}
+
+a.action {
+background-color: #ebcf7e;
+color: #fff;
+text-decoration: none;
+font-size: .9em;
+padding: 12px 10px 8px;
+display: inline-block;
+border-color: #ebcf7e;
+border-style: solid;
+border-width: 1px;
+width: 38%;
+text-align: center;
+position: relative;
+text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+-webkit-transition: all .2s ease;
+-moz-transition: all .2s ease;
+-o-transition: all .2s ease;
+transition: all .2s ease;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+}
+
+img {
+width: auto\9;
+height: auto;
+max-width: 100%;
+vertical-align: middle;
+border: 0;
+-ms-interpolation-mode: bicubic;
+}
+
+#controlWrap {
+max-width: none;
+width: 100%;
+height: 50px;
+margin: 0px;
+background-color: #FFFFFF;
+color: #000;
+}
+
+/*  Space Name  */
+
+
+-webkit-appearance: none;
+border-collapse: separate;
+box-sizing: border-box;
+color: rgb(88, 84, 80);
+cursor: auto;
+display: inline-block;
+font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 27px;
+font-weight: bold;
+height: 33px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 13.5px;
+text-align: left;
+width: 93.46875px;
+
+
+/*  BANNER CLICKABLE  */
+.banner {
+cursor: pointer;
+}
+.banner {
+height: 300px;
+background-size: cover;
+background-position: center center;
+background-color: #f8f4f0;
+position: relative;
+max-width: 1100px;
+width: 100%;
+border-radius: 10px;
+}
+
+
+
+/************* EXPAND BOTTOM *************/
+.expandBelow {
+background-color: #fff;
+overflow: hidden;
+margin: 0;
+position: relative;
+}
+
+
+a.headingCity-a {
+display: inline-block;
+}
+
+.expand h1.headingCity sup, .expand h2.headingCity sup {
+margin: 0;
+vertical-align: bottom;
+margin-left: 0.3em;
+margin-bottom: 0.2em;
+font-size: 0.55em;
+}
+
+.expandContents .headingCountry {
+vertical-align: bottom;
+display: inline-block;
+margin-bottom: 0.1em;
+margin-left: 0.15em;
+font-size: 1.5em;
+}
+
+.expandContents .headingCity {
+color: #585450;
+margin: 0;
+margin-top: 0.5em;
+font-size: 1.5em;
+display: inline-block;
+}
+
+.expandContents a {
+border-bottom: 1px dotted rgba(0,0,0,0);
+}
+
+.tabs {
+margin-top: 1em;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.tabs ul {
+margin: 0;
+padding: 0;
+}
+
+
+.tabs ul li.active, .expand .tabs ul li:hover {
+color: #585450;
+border-bottom: 3px solid #585450;
+cursor: pointer;
+}
+
+.tabs ul li span {
+font-weight: 400;
+margin-bottom: 0.25em;
+display: block;
+}
+
+.tabs ul li {
+border-bottom: 3px solid #fff;
+}
+
+.tabs ul li {
+display: inline-block;
+margin: 0;
+margin-right: 1em;
+margin-bottom: 0.5em;
+}
+
+.tab.tab-details {
+display: block;
+}
+
+.detailsWrapper {
+width: 50%;
+display: inline-block;
+padding: 0;
+vertical-align: top;
+}
+
+.detailsWrapper table.details {
+width: 100%;
+}
+
+table.details {
+margin: 0;
+display: table;
+}
+
+table {
+display: inline-block;
+vertical-align: top;
+margin-right: 3em;
+}
+
+td td:nth-child(2) {
+text-align: right;
+padding-right: 1em;
+}
+
+td {
+padding-left: 0;
+text-align: left;
+height: 2.5em;
+cursor: text;
+font-size: 18px;
+vertical-align: middle;
+}
+
+
+
+
+.detailsWrapper tr td:nth-child(2) {
+/* min-width: 6em; */
+text-align: right !important;
+}
+
+#leaderboard td {
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+}
+
+.expand td td:first-child {
+/* font-weight: 500; */
+}
+
+
+#leaderboard td {
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+}
+
+.detailsWrapper tr td:nth-child(2) {
+min-width: 6em;
+text-align: right !important;
+}
+
+.expand .detailsWrapper td {
+vertical-align: middle;
+}
+
+.tab.tab-details {
+display: block;
+}
+
+
+/**** TITLE HEADING  ***/
+a.heading {
+display: inline-block;
+}
+
+a.heading.SpaceName {
+color: #414141;
+}
+
+a.heading.SpaceTagline {
+margin-left: 30px;
+font-weight: 300 !important;
+font-size: 13px;
+}
+
+
+/************* EXPAND BOTTOM *************/
+
+.spaceDetails {
+  padding: 2%;
+}
+
+td {
+  -webkit-appearance: none;
+border-collapse: separate;
+box-sizing: border-box;
+color: rgb(88, 84, 80);
+cursor: text;
+display: table-cell;
+font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 18px;
+font-weight: 500;
+height: 45px;
+padding-bottom: 3.59999990463257px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 3.59999990463257px;
+text-align: left;
+vertical-align: top;
+width: 278px;
+}
+
+td.internet_speed  {
+  -webkit-appearance: none;
+border-collapse: separate;
+box-sizing: border-box;
+color: rgb(198, 194, 190);
+cursor: text;
+display: table-cell;
+font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 18px;
+font-weight: 300;
+height: 49px;
+min-width: 108px;
+padding-bottom: 3.59999990463257px;
+padding-left: 0px;
+padding-right: 18px;
+padding-top: 3.59999990463257px;
+text-align: right;
+vertical-align: middle;
+width: 257px;
+}
+
+sup {
+font-size: 7px;
+}
+
+.indicator {
+-webkit-appearance: none;
+border-bottom-color: rgb(54, 230, 127);
+border-bottom-left-radius: 3.375px;
+border-bottom-right-radius: 3.375px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-collapse: separate;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(54, 230, 127);
+border-left-style: solid;
+border-left-width: 2px;
+border-right-color: rgb(54, 230, 127);
+border-right-style: solid;
+border-right-width: 2px;
+border-top-color: rgb(54, 230, 127);
+border-top-left-radius: 3.375px;
+border-top-right-radius: 3.375px;
+border-top-style: solid;
+border-top-width: 2px;
+box-sizing: border-box;
+color: rgb(54, 230, 127);
+cursor: text;
+display: inline-table;
+font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: normal;
+height: 43.09375px;
+line-height: 27px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+min-height: 40.5px;
+min-width: 47.25px;
+padding-bottom: 4.05000019073486px;
+padding-left: 4.05000019073486px;
+padding-right: 4.05000019073486px;
+padding-top: 4.05000019073486px;
+text-align: center;
+width: 54px;
+}
+
+
+/*****   TWEET BUTTON *****/
+.tweet-city {
+background-color: #59adeb;
+padding: 1em;
+color: #fff;
+margin-left: -1em;
+margin-right: -1em;
+margin-bottom: 0;
+}
+
+.tweet-city .box {
+margin: 0 auto;
+display: table;
+}
+
+element.style {
+}
+.tweet-city p {
+text-align: center;
+line-height: 1.5;
+margin: 0 auto;
+padding-left: 1em;
+padding-right: 1em;
+color: #585450;
+font-weight: 400;
+color: #fff;
+display: inline-block;
+}
+
+
+.button {
+cursor: pointer;
+padding: 0.5em;
+color: #c6c2be;
+font-weight: 500;
+border-radius: 0.25em;
+border: 2px solid #c6c2be;
+text-align: center;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+display: inline-block;
+}
+
+.tweet-city .action-tweet-this:hover {
+background-color: #59adeb;
+color: #fff;
+}
+
+.tweet-city .action-tweet-this {
+border-color: #fff;
+margin: 0 auto;
+padding: 0.5em;
+display: inline-block;
+background: #fff;
+color: #59adeb;
+}
+
+/*****   END TWEET BUTTON *****/
+
+
+  		</style>
+      <!-- end modif css -->
+	</head>
+	<body>
+
+
+<!-- ****** #NAVBAR WRAP ****** -->
+        <div id="controlWrap">
+
+            <!-- LOGO Co working United -->
+            <a class="CWUlogo" href="http://www.coworkingunited.com/"><img height="37" width="200" src="http://givenget.eu/COWORKINGUNITED/APP/img/cwulogo.png" class="CWLogo" border="0"></a>
+
+            <!-- .menu  -->
+            <div class="menu">
+                <a href="#Addproject" class="action navButton addResource" title="Add a Resource"><i class="icon-plus"></i> Add a Resource</a>
+                <a href="#aboutModal" role="button" class="action navButton aboutMap" title="About the Map" data-toggle="modal"><i class="icon-map-marker"></i>About the Map</a>
+            </div><!-- .menu -->
+
+        </div>
+<!-- ******  #NAVBAR WRAP END ******  -->
+
+
+
+  <div class="spaceDetails">
+
+    <hr>
+
+    <!-- Space Name -->
+    <a class="heading SpaceName" title="Hubba Thailand" href="/hubba/"><h1 class="headingCity">Hubba</h1></a>
+
+    <a class="heading SpaceTagline" href="#city@map" title="HubbaTagline"><h3>The first Startup Co Working Space in Thailand</h3></a>
+
+
+    <!-- ******  #BANNER ******  -->
+    <div class="banner clickable" data-image="/assets/spaces/1500px/hubba.jpg" style="background-image: url(hubba.jpg);"></div>
+
+    <!-- TABLE DOCS & DATA  -->
+    <td colspan="99" class="expand expandContents">
+      <div class="expandBelow">
+            
+
+      <!-- Space Details Div -->
+      <div class="SpaceDetails">
+          <div class="tabs">
+              <ul>
+                  <li class="active" data-display="tab-details"><span>Details</span>
+                  </li>
+                  <li data-display="tab-discussion"><span>Discussion</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- END Space Details Div -->
+
+
+    <!-- Space DETAILS Data Display -->
+          <div class="tab tab-details">
+              <div class="detailsWrapper">
+                  <table class="details">
+                      <tbody>
+                          <tr>
+                              <td>City</td>
+                              <td class="editable"><a href="#/map@city" title="CityName">Bangkok</a>
+                              </td>
+                          </tr>
+                          <tr>
+                          <tr>
+                              <td>Net speed</td>
+                              <td class="indicatorbox">
+                                  <div class="indicator okay"><span>20</span><sup>MBPS</sup>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Events</td>
+                              <td class="indicatorbox" data-value="30">
+                                  <div class="indicator good">4<sup>/week</sup></div></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>People Traffic</td>
+                              <td class="indicatorbox">
+                                  <div class="indicator okay">30<sup>/day</sup></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Price per day</td>
+                              <td>THB 250</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          
+          </div>  <!-- Expandbelow  END Div before TD -->
+
+      </td><!--    END TD -->
+
+      <!-- TEST DISQUS -->
+      <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'coworkingunited'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!-- END TEST DISQUS -->
+  </div>
+  <div class="tweet-city bottom">
+          <div class="box"> 
+              <p>Hubba in Bangkok costs $90 per month to work and meet people</p> 
+              <a href="http://twitter.com/intent/tweet?text=Hoi+An+costs+%241%2C077+per+month+to+live+and+work+remotely+on+%40NomadList_+http%3A%2F%2FNomadList.io%2Fhoi-an-vietnam+%28by+%40levelsio%29"> 
+              <div class="button action-tweet-this">
+                <i class="fa fa-twitter"></i>Tweet</div> </a> 
+              </div>
+  </div>
+  <!-- Scripts -->
+  <script src="http://givenget.eu/COWORKINGUNITED/APP/js/jquery.min.js"></script>
+
+  <!-- DISQUS SCRIPT -->
+      <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'coworkingunited'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+</body>
+
+</html>
